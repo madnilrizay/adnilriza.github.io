@@ -32,7 +32,7 @@
 POST_TITLE="${@:2:$(($#-1))}"
 POST_NAME="$(echo ${@:2:$(($#-1))} | sed -e 's/ /-/g' | sed "y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/")"
 CURRENT_DATE="$(date +'%Y-%m-%d')"
-TIME=$(date +"%H:%M")
+TIME=$(date +"%T")
 FILE_NAME="${CURRENT_DATE}-${POST_NAME}.markdown"
 # ----------------------------------------------------------------
 
@@ -84,7 +84,7 @@ e_warning() {
 # | MAIN FUNCTIONS                                                             |
 # ------------------------------------------------------------------------------
 
-# Everybody needs some help
+# Everybody need some help
 initpost_help() {
 
 cat <<EOT
@@ -106,7 +106,7 @@ EOT
 
 }
 
-# Initial content
+# Initial Content
 initpost_content() {
 
 echo "---"
@@ -115,10 +115,9 @@ echo "layout: post"
 echo "date: ${CURRENT_DATE} ${TIME}"
 echo "image: '/assets/images/'"
 echo "description:"
-echo "tag:"
+echo "tags:"
 echo "blog: true"
 echo "jemoji:"
-echo "author:"
 echo "---"
 
 }
@@ -130,7 +129,7 @@ initpost_file() {
         initpost_content > "${DIST_FOLDER}/${FILE_NAME}"
         e_success "Initial post successfully created!"
     else
-        e_warning "File already exists."
+        e_warning "File already exist."
         exit 1
     fi
 
