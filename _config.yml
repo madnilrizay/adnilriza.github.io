@@ -1,13 +1,13 @@
 # main text of home
-name: Tugas Kelompok
-bio: 'Website ini dibuat untuk mempraktekkan ilmu'
+name: Tugas Individu
+bio: 'Tugas Membuat Website'
 
 # if it's an external image, update below for true
 # better with square images
 external-image: false
 picture: 'assets/images/profile.jpg'
 
-url: https://sifuinsuskariau.github.io/projectuas.github.io/
+url: https://madnilrizay.github.io/adnilriza.github.io/
 # your url: http://USERNAME.github.io
 
 permalink: /:title/
@@ -34,7 +34,7 @@ highlighter: rouge
 # linkedin: mylinkedin
 #youtube: myyoutube
 #spotify: myspotify
-github: sifuinsuskariau.github.io/
+github: https://madnilrizay.github.io/
 #medium: medium
 #vimeo: myvimeo
 email: adnil.riza@gmail.com
